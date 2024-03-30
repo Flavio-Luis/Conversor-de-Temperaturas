@@ -39,14 +39,14 @@ def limpar_terminal(): # função para limpar o terminal windows
     return os.system("cls")
 
 def valor_final(value_final): # função para exibir a mensagem final
-    if response > 0 and response < 3: 
-        final = f"A temperatura é {value_final}°C"
-        return final
-    elif response > 2 and response < 5:
+    if response == 1 or response == 6: 
         final = f"A temperatura é {value_final}°F"
         return final
-    else:
+    elif response == 2 or response == 4:
         final = f"A temperatura é {value_final}°K"
+        return final
+    else:
+        final = f"A temperatura é {value_final}°C"
         return final
 
 opcoes = { # criação do dict
